@@ -9,6 +9,7 @@
   --second-background: #f5f4fa;
   --color-border-portfolio: #eeeeee;
   --icon-color: #afb1b8;
+  --transition-duration-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -66,7 +67,7 @@ a {
   letter-spacing: 0.02em;
   color: var(--fonts-accent-color);
 
-  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration-function);
 }
 
 .address-nav .navigation {
@@ -122,7 +123,7 @@ a {
   margin-right: 10px;
   fill: var(--primary-font-color);
 
-  transition: fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-duration-function);
 }
 
 .navigation:hover > .icon {
@@ -271,7 +272,7 @@ hr {
   text-transform: uppercase;
 
   color: var(--color-light);
-  background: rgba(47, 48, 58, 0.8);
+  background-color: rgba(47, 48, 58, 0.8);
 
   width: 370px;
   height: 70px;
@@ -347,7 +348,7 @@ hr {
   align-items: center;
   justify-content: center;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition-duration-function);
 }
 .icon-bg:not(:last-child) {
   margin-right: 10px;
@@ -363,7 +364,7 @@ hr {
   width: 20px;
   height: 20px;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition-duration-function);
 }
 
 .icon-bg:hover > .icon-team {
@@ -395,7 +396,7 @@ hr {
 
 .icon-clients {
   fill: var(--icon-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-duration-function);
 }
 
 .clients-item {
@@ -406,7 +407,7 @@ hr {
   align-items: center;
   justify-content: center;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-duration-function);
 }
 
 .clients-item:hover,
@@ -499,7 +500,7 @@ hr {
   align-items: center;
   justify-content: center;
 
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-duration-function);
 }
 
 .join-icon > .icon-team {
@@ -520,7 +521,7 @@ hr {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
 }
@@ -544,7 +545,7 @@ hr {
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(0);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-duration-function);
 }
 
 .backdrop:not(.is-hidden) .modal {
@@ -591,8 +592,8 @@ hr {
   border-radius: 4px;
   padding: 6px 22px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration-function),
+    background-color var(--transition-duration-function);
 }
 
 .menu-item:not(:last-child) {
@@ -683,9 +684,11 @@ hr {
   background-color: rgba(33, 150, 243, 0.9);
 
   position: absolute;
+  left: 0;
+  bottom: -100%;
 
   transform: translateY(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition-duration-function);
 }
 
 .thumb-products {
