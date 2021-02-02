@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ДЗ4</title>
+    <title>ДЗ5</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -62,7 +62,7 @@
       <!-- Лозунг сайта -->
       <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <a href="#" class="button">Заказать услугу</a>
+        <a href="#" class="button" data-modal-open>Заказать услугу</a>
       </section>
       <!-- /Лозунг сайта -->
       <!-- About -->
@@ -126,29 +126,29 @@
         <div class="container">
           <h2 class="work-title">Чем мы занимаемся</h2>
           <ul class="list-no-style work-flex">
-            <li>
-              <img
-                src="./img/typing.jpg"
-                alt="печатет на клаве"
-                width="370"
-                height="294"
-              />
+            <li class="work-item">
+              <img src="./img/typing.jpg" alt="печатет на клаве" />
+              <div class="description">Десктопные приложения</div>
             </li>
-            <li>
+            <li class="work-item">
               <img
                 src="./img/mobila-noyt.jpg"
                 alt="Мобильный"
                 width="370"
                 height="294"
               />
+              <div class="description">
+                <div class="description">Десктопные приложения</div>
+              </div>
             </li>
-            <li>
+            <li class="work-item">
               <img
                 src="./img/tablet.jpg"
                 alt="Планшет"
                 width="370"
                 height="294"
               />
+              <div class="description">Дизайнерские решения</div>
             </li>
           </ul>
         </div>
@@ -424,5 +424,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="button-icon-close" data-modal-close>
+          <svg class="icon-close">
+            <use href="./img/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./madal.js"></script>
   </body>
 </html>
